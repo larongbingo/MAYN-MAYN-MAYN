@@ -1,8 +1,7 @@
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav } from 'react-bootstrap';
 import React, { SFC } from 'react';
 
-export const Header: SFC = () => 
-<Navbar>
+export const Header: SFC = () => <Navbar>
   <Navbar.Header>
     <Navbar.Brand>
       <a href="#home">React-Bootstrap</a>
