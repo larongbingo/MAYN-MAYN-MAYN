@@ -1,6 +1,7 @@
-import { Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Navbar, NavItem, NavDropdown, MenuItem, Nav } from 'react-bootstrap';
+import React, { SFC } from 'react';
 
-export const Navbar = () => 
+export const Header: SFC = () => 
 <Navbar>
   <Navbar.Header>
     <Navbar.Brand>
