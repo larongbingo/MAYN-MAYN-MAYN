@@ -1,0 +1,29 @@
+{
+  "name": "mayn-mayn-mayn",
+  "version": "1.0.0",
+  "description": "An auction app where users have to say 'MINE!' to send a bid",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.6.0",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.18",
+    "@types/react-dom": "^16.0.9",
+    "typescript": "^3.1.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larongbingo/jamstack2018-entry.git"
+  },
+  "author": "larongbingo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/larongbingo/jamstack2018-entry/issues"
+  },
+  "homepage": "https://github.com/larongbingo/jamstack2018-entry#readme"
+}
