@@ -1,6 +1,6 @@
 import { Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
-export const Header = () => 
+export const Navbar = () => 
 <Navbar>
   <Navbar.Header>
     <Navbar.Brand>
