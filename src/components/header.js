@@ -1,6 +1,8 @@
 import React from 'react'
 import { Navbar, NavDropdown, MenuItem, Nav, NavItem } from 'react-bootstrap'
 
+import AccountHeader from './account.header';
+
 const Header = ({ siteTitle }) => (
   <Navbar inverse collapseOnSelect>
     <Navbar.Header>
@@ -18,10 +20,7 @@ const Header = ({ siteTitle }) => (
         <NavItem eventKey={4} href="/sell">Sell</NavItem>
         <NavItem eventKey={3} href="/about">About</NavItem>
       </Nav>
-      <Nav pullRight>
-        <NavItem eventKey={1} href="/login">Log In</NavItem>
-        <NavItem eventKey={2} href="/signup">Sign Up</NavItem>
-      </Nav>
+      <AccountHeader />
     </Navbar.Collapse>
   </Navbar>
 );
