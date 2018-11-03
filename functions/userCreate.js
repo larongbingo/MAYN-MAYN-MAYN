@@ -33,7 +33,7 @@ exports.handler = async function(event, context, callback) {
     body: JSON.stringify({query: query})
   });
 
-  let result = response.json();
+  let result = await response.json();
 
   console.log(result);
 
