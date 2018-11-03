@@ -7,3 +7,5 @@ export const Items = ({ items }) => (
     { items }
   </Layout>
 )
+
+export default Items

@@ -7,3 +7,5 @@ export const Sell = () => (
     <h1>Sell</h1>
   </Layout>
 )
+
+export default Sell
