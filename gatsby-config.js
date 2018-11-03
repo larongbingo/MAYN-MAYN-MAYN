@@ -25,6 +25,14 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: 'MAYN',
+        fieldName: 'mayn',
+        url: 'https://mayn-mayn-mayn-chat.herokuapp.com/v1alpha1/graphql'
+      }
+    }, 
     'gatsby-plugin-offline',
   ],
 }
