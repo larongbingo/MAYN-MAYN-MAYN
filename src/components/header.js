@@ -1,33 +1,35 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Navbar, NavDropdown, MenuItem, Nav, NavItem } from 'react-bootstrap'
 
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+  <Navbar inverse collapseOnSelect>
+    <Navbar.Header>
+      <Navbar.Brand>
+        <a href="/">{siteTitle}</a>
+      </Navbar.Brand>
+      <Navbar.Toggle />
+    </Navbar.Header>
+    <Navbar.Collapse>
+      <Nav>
+        <NavDropdown eventKey={2} title="Buy" id="basic-nav-dropdown">
+          <MenuItem eventKey={2.1}>Bid on an auction</MenuItem>
+          <MenuItem eventKey={2.2}>Buy an item</MenuItem>
+        </NavDropdown>
+        <NavItem eventKey={3} href="/about">
+          About
+        </NavItem>
+        
+      </Nav>
+      <Nav pullRight>
+        <NavItem eventKey={1} href="/login">
+          Log In
+        </NavItem>
+        <NavItem eventKey={2} href="/signup">
+          Sign Up
+        </NavItem>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
+);
 
 export default Header
