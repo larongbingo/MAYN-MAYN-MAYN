@@ -12,8 +12,11 @@ exports.handler = async function(event, context, callback) {
     }
   }
   
+  // Check if the username is unique
+  // Hash the password
+
   return {
     statusCode: 200,
-    payload: event
+    body: JSON.stringify(event)
   };
 }
