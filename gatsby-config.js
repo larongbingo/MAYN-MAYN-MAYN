@@ -30,7 +30,11 @@ module.exports = {
       options: {
         typeName: 'MAYN',
         fieldName: 'mayn',
-        url: 'https://mayn-mayn-mayn-chat.herokuapp.com/v1alpha1/graphql'
+        url: 'https://mayn-mayn-mayn-chat.herokuapp.com/v1alpha1/graphql',
+        headers: {
+          "X-Hasura-Access-Key": "ThatOneNoob",
+          "Content-Type": "application/json"
+        }
       }
     }, 
     'gatsby-plugin-offline',
