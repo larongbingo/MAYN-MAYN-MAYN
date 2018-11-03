@@ -1,5 +1,5 @@
 const { hash } = require('bcryptjs');
-const fetch = require('node-fetch');
+const FetchQL = require('fetchql');
 
 exports.handler = async function(event, context, callback) {
   console.log(event);
@@ -23,25 +23,21 @@ exports.handler = async function(event, context, callback) {
     }
   }`;
 
-  // Check if the username is unique
-  let response = await fetch(url_root, {
-    method: 'GET',
-    headers: {
-      'X-Hasura-Access-Key': 'ThatOneNoob',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({query: query})
-  });
+  const headers = {
+    'X-Hasura-Access-Key': 'ThatOneNoob',
+    'Content-Type': 'application/json'
+  };
 
-  let result = await response.json();
 
-  console.log(result);
+  const Query = new FetchQL({url: url_root, headers: headers});
+
+  const result = await Query.query({operationName: 'POST', query: query});
 
   // Hash the password
 
 
   return {
     statusCode: 200,
-    body: JSON.stringify(event)
+    body: JSON.stringify(result)
   };
 }
