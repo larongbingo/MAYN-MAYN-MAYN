@@ -1,4 +1,5 @@
 const { hash } = require('bcryptjs');
+const fetch = require('node-fetch');
 
 exports.handler = async function(event, context, callback) {
   console.log(event);
