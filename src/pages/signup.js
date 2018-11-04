@@ -58,6 +58,10 @@ export class SignUp extends React.Component {
   async onSignUpClick(e) {
     // Fetch sign up data to the serverless functions
     let response = await fetch('https://romantic-euler-651676.netlify.com/.netlify/functions/userCreate', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify({
         email: this.state.email,
         firstName: this.state.firstName,
