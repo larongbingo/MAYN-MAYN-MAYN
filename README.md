@@ -1,7 +1,7 @@
 # MAYN! MAYN! MAYN!
 ## An auction web app where you have to say "MINE!" to place a bid
 
-### Wa dis?
+### What is this?
 Well, it's a web app that has buy and sell feature and can do auction stuff
 
 ### Why did you create this mess?
