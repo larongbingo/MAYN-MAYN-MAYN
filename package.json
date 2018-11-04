@@ -20,7 +20,8 @@
     "react": "^16.5.1",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "universal-cookie": "^3.0.4"
   },
   "keywords": [
     "gatsby"
