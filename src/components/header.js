@@ -14,8 +14,8 @@ const Header = ({ siteTitle }) => (
     <Navbar.Collapse>
       <Nav>
         <NavDropdown eventKey={2} title="Buy" id="basic-nav-dropdown">
-          <MenuItem eventKey={2.1} href="/items?type=bid">Bid on an auction</MenuItem>
-          <MenuItem eventKey={2.2} href="/items?type=sale">Buy an item</MenuItem>
+          <MenuItem eventKey={2.1} href="/itemssale">Bid on an auction</MenuItem>
+          <MenuItem eventKey={2.2} href="/itemsauction">Buy an item</MenuItem>
         </NavDropdown>
         <NavItem eventKey={4} href="/sell">Sell</NavItem>
         <NavItem eventKey={3} href="/about">About</NavItem>
