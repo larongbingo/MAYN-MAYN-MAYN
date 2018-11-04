@@ -26,7 +26,16 @@ export class LogIn extends React.Component {
   }
 
   onLogInClick(e) {
-
+    fetch('https://romantic-euler-651676.netlify.com/.netlify/functions/userAuth', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email: this.state.username,
+        password: this.state.password
+      })
+    })
   }
 
   render() {
@@ -57,7 +66,7 @@ export class LogIn extends React.Component {
           
           <FormGroup>
             <Col smOffset={2} sm={12}>
-              <Button>Log In</Button>
+              <Button onClick={this.onLogInClick}>Log In</Button>
             </Col>
           </FormGroup>
         </Form>
