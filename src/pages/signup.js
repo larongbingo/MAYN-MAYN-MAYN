@@ -32,6 +32,7 @@ export class SignUp extends React.Component {
     this.onLastNameChange = this.onLastNameChange.bind(this);
     this.onEmailChange = this.onEmailChange.bind(this);
     this.onPasswordChange = this.onPasswordChange.bind(this);
+    this.onSignUpClick = this.onSignUpClick.bind(this);
   }
 
   onFirstNameChange(e) {
@@ -54,8 +55,25 @@ export class SignUp extends React.Component {
     this.setState({chatName: e.target.value});
   }
 
-  onSignUpClick(e) {
-    
+  async onSignUpClick(e) {
+    // Fetch sign up data to the serverless functions
+    let response = await fetch('https://romantic-euler-651676.netlify.com/.netlify/functions/userCreate', {
+      body: JSON.stringify({
+        email: this.state.email,
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        password: this.state.password,
+        chatName: this.state.chatName
+      })
+    });
+
+    let result = await response.json();
+
+    console.log(response);
+    console.log(result);
+
+    // Redirect to home
+    window.location = "/";
   }
 
   render() {
@@ -121,7 +139,7 @@ export class SignUp extends React.Component {
     
           <FormGroup>
             <Col smOffset={2}>
-              <Button>Sign Up</Button>
+              <Button onClick={this.onSignUpClick}>Sign Up</Button>
             </Col>
           </FormGroup>
           
