@@ -1,8 +1,10 @@
 const fetch = require('node-fetch');
 
-module.exports = async function createPilonToken(token_scope) {
+// For public data
+module.exports = async function createPublicPilonToken() {
   const url = 'https://api.pilon.io/v1/token';
-  const environment_id = "ece2ea78-dff3-11e8-a0d7-53f8f57f6759";
+  const environment_id = "28ac04ce-e01a-11e8-8947-c180050c48e3";
+  const token_scope = 'public';
 
   let response = await fetch(url, {
     method: 'POST',
