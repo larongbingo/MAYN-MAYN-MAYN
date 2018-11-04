@@ -1,3 +1,4 @@
+import cookies from './cookies';
 
 /**
  * Checks whether theres a cookie that signifies that theres
@@ -5,7 +6,7 @@
  * @returns {boolean} Returns true if theres an active session, false otherwise
  */
 export function cookieChecker() {
-  return localStorage.getItem('session') !== null;
+  return cookies.get('session') !== null;
 }
 
 export default cookieChecker;
