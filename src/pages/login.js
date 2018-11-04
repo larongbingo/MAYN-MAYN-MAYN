@@ -26,7 +26,7 @@ export class LogIn extends React.Component {
   }
 
   onLogInClick(e) {
-    fetch('https://romantic-euler-651676.netlify.com/.netlify/functions/userAuth', {
+    let response = await fetch('https://romantic-euler-651676.netlify.com/.netlify/functions/userAuth', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -36,6 +36,13 @@ export class LogIn extends React.Component {
         password: this.state.password
       })
     })
+
+    let result = await response.json();
+
+    console.log(response)
+    console.log(result)
+
+    window.location = '/';
   }
 
   render() {
