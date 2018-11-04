@@ -6,7 +6,7 @@ import cookies from './cookies';
  * @returns {boolean} Returns true if theres an active session, false otherwise
  */
 export function cookieChecker() {
-  return cookies.get('session') !== null;
+  return cookies.get('session') !== undefined;
 }
 
 export default cookieChecker;
