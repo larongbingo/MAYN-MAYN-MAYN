@@ -2,6 +2,7 @@ import React from 'react'
 import { FormGroup, FormControl, ControlLabel, Button, Form, Col } from 'react-bootstrap'
 
 import Layout from '../components/layout';
+import cookie from '../utils/cookies'
 
 export class LogIn extends React.Component {
   constructor(props, context) {
@@ -25,7 +26,7 @@ export class LogIn extends React.Component {
     this.setState({password: e.target.value});
   }
 
-  onLogInClick(e) {
+  async onLogInClick(e) {
     let response = await fetch('https://romantic-euler-651676.netlify.com/.netlify/functions/userAuth', {
       method: 'POST',
       headers: {
@@ -38,6 +39,8 @@ export class LogIn extends React.Component {
     })
 
     let result = await response.json();
+
+    cookie.set('session', result);
 
     console.log(response)
     console.log(result)
