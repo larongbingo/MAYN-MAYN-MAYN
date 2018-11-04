@@ -7,3 +7,5 @@ export const ContactUs = () => (
     <h1>Contact Us</h1>
   </Layout>
 )
+
+export default ContactUs;
