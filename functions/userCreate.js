@@ -1,19 +1,7 @@
-const { hash } = require('bcryptjs');
-const FetchQL = require('fetchql');
+const client = require('./utils/graphql.client')
 
 exports.handler = async function(event, context, callback) {
   console.log(event);
-  
-  const url_root = 'https://mayn-mayn-mayn-chat.herokuapp.com/v1alpha1/graphql';
-
-  if(event.httpMethod !== 'POST') {
-    return { 
-      statusCode: 400,
-      payload: {
-        message: 'Invalid HTTP Method'
-      }  
-    }
-  }
   
   const query = `query {
     users(where: {username: {_eq: "user"}}) {
@@ -23,18 +11,7 @@ exports.handler = async function(event, context, callback) {
     }
   }`;
 
-  const headers = {
-    'X-Hasura-Access-Key': 'ThatOneNoob',
-    'Content-Type': 'application/json'
-  };
-
-
-  const Query = new FetchQL({url: url_root, headers: headers});
-
-  const result = await Query.query({operationName: 'POST', query: query});
-
-  // Hash the password
-
+  let result = await client.query({operationName: 'Query', query: query, variables: null});
 
   return {
     statusCode: 200,
