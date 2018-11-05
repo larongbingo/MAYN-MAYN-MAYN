@@ -25,12 +25,6 @@ module.exports = async function createEnvironmentPilonToken() {
     })
   });
 
-  console.log(JSON.stringify({
-    token_scope: token_scope,
-    client_id: client_id,
-    client_secret: client_secret
-  }))
-
   let result = await response.json();
 
   return result;
