@@ -4,9 +4,7 @@ import cookies from '../utils/cookies'
 import Layout from '../components/layout'
 
 export class LogOut extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-
+  onLoad() {
     cookies.remove('session');
 
     window.location = '/'
@@ -15,7 +13,7 @@ export class LogOut extends React.Component {
   render() {
     return (
       <Layout>
-        <h1>Logging Out</h1>
+        <h1 onLoad={this.onLoad}>Logging Out</h1>
       </Layout>
     )
   }
