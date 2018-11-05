@@ -1,4 +1,4 @@
-# MAYN! MAYN! MAYN!
+# MAYN! MAYN! MAYN! - If it was completed on time
 ## An auction web app where you have to say "MINE!" to place a bid
 
 ### What is this branch?
