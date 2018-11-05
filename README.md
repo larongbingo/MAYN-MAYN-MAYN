@@ -1,6 +1,14 @@
 # MAYN! MAYN! MAYN!
 ## An auction web app where you have to say "MINE!" to place a bid
 
+### What is this branch?
+Since they hackathon is done, the APIs will probably be removed,
+soooo, since I now have an idea on what to build and what tools
+to use it with, this branch is dedicated to it.
+
+And since there's still a lot of bugs in Pilon, the schemas will
+be recreated at Hasura.
+
 ### What is this?
 Well, it's a web app that has buy and sell feature and can do auction stuff
 
