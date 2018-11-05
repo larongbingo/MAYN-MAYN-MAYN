@@ -15,6 +15,9 @@ also i want to learn how to use JAMstack and serverless APIs, they're berry awsu
 - bootstrap
 - netlify for the hosting
 - Hasura and heroku for the real time db with graphql
+That's supposed to be the plan, but errors & bugs and me being slow at learning stuff, made this
+thing a web app with signup and login. 
+THis is sooo sed, ALEXA. PLAY DETPATITO
 
 ### Who dis?
 The team that created this are:
